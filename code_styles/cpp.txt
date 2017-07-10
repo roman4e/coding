@@ -1,0 +1,139 @@
+// @@indentation_symbol <tab>
+// @@tab_size 4
+// @@curly next_line blocks, conditions
+// @@conditions_spaces everywhere
+// @@arguments_spaces none
+// @@breaks before conditions, after blocks, collapse
+// @@comments single lines only
+// @@doc_mark * @return @arg
+// @@var_name_min_length 4
+// @@allow_counter_variables yes
+// @@wrap_long_params true
+// @@indent_long_params 2 
+// above, "2" means 2 indentation symbols, there is a two tabs
+// @@class_naming snake_case, first_letter_upper_case
+
+#include <iostream>
+#include <list>
+
+namespace {
+typedef mytype int;
+
+std::vector<std::string> list 
+	{
+		"first",
+		"second",
+		"third",
+		"more" 
+	};
+
+enum NUMS
+{
+	one,
+	two,
+	three,
+	four,
+	five
+};
+
+int main(int argc, char** argv)
+{
+    mytype a = 5;
+    decltype(a) b = 3;
+
+    if ( a > b )
+    {
+        switch ( get_case() )
+        {
+        	case Cases::A:
+        		do_some_stuff_a();
+        		break;
+
+        	case Cases::B:
+        	default:
+        		Cases::default_case_handler("first long argument", "second long argument",
+        				"third long argument", "fourth");
+    			break;
+        }
+    }
+    else
+    {
+
+    }
+
+#if ALLOW_SOMETHING
+    while ( something() && other()
+    	|| another()
+    	|| Some_class::some_method() )
+    {
+
+    }
+#endif
+
+    //todo(nick_or_email) write down more code
+}
+
+Case get_case()
+{
+	return random_case();
+}
+
+Case random_case(std::list<Case> case_list)
+{
+	auto shosen_case;
+	// randomize
+	return shosen_case;
+}
+
+} // end namespace default
+
+namespace My {
+template<class T, CasesT...>class Cases
+{
+public:
+	const int A = 5;
+	const int B = 6;
+
+	typedef Case_type Case;
+	typedef Case_list std::list<Case_type>;
+
+public:
+	// * Return prepared list of Cases
+	// @return std::list<Case>
+	Case_list case_list()
+	{
+		Case_list list;
+		// ...
+		return list;
+	}
+
+	void default_case_handler(args...)
+	{
+		//
+		auto composed = args[0] + args[1] + args[2] + args[3];
+	}
+
+
+private:
+	// @deprecated
+	// * Digest description
+	void private_func()
+	{
+
+	}
+
+	// * Create and fill simple case
+	// @arg <std::string> porpose - some reason of the case
+	// @return Case
+	static Case create_case(std::string purpose)
+	{
+
+	}
+} // end class Cases
+
+class Case: public Case_Base
+{
+
+}// end class Case
+
+}// end namespace My
