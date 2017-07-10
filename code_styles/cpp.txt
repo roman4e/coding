@@ -1,6 +1,6 @@
 // @@indentation_symbol <tab>
 // @@tab_size 4
-// @@curly next_line blocks, conditions
+// @@curly next_line blocks, conditions, definition_list
 // @@conditions_spaces everywhere
 // @@arguments_spaces none
 // @@breaks before conditions, after blocks, collapse
@@ -10,6 +10,7 @@
 // @@allow_counter_variables yes
 // @@wrap_long_params true
 // @@indent_long_params 2 
+// @@indent_definition_list 2
 // above, "2" means 2 indentation symbols, there is a two tabs
 // @@class_naming snake_case, first_letter_upper_case
 
@@ -20,12 +21,12 @@ namespace {
 typedef mytype int;
 
 std::vector<std::string> list 
-	{
-		"first",
-		"second",
-		"third",
-		"more" 
-	};
+		{
+			"first",
+			"second",
+			"third",
+			"more" 
+		};
 
 enum NUMS
 {
